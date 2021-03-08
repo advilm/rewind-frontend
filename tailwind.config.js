@@ -5,12 +5,13 @@ module.exports = {
 	darkMode: false,
 	theme: {
 		colors: {
-			transparent: 'transparent',
-			current: 'currentColor',
-			blue: {
-				light: '#60A5FA',
-				dark: '#090b10'
-			}
+			'transparent': 'transparent',
+			'current': 'currentColor',
+			'primary': '#08090d',
+			'primary-light': '#171a26',
+			'secondary': '#4fc2f7',
+			'primary-text': '#e1e1e1',
 		}
-	}
+	},
+	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}']
 };
