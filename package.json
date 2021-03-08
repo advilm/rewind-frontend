@@ -12,6 +12,7 @@
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "redux": "^4.0.5",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
