@@ -13,15 +13,15 @@ export default function Layout({
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
 			<div className='flex flex-col bg-primary h-screen text-primary-text'>
-				<nav className='p-4 bg-primary-light text-xl'>
+				<nav className='py-4 bg-primary-light text-xl'>
 					<div className='flex items-strech justify-between'>
 						<div className='flex items-center'>
-							<img src='favicon.ico' width='32' height='32' className='mr-2'></img>
+							<img src='favicon.ico' width='32' height='32' className='ml-4 mr-2'></img>
 							<strong>Rewind</strong>
 						</div>
 						<div className='items-end'>
-							<a href='https://discord.gg/EbJzhBqu2U' target='_blank' rel='noreferrer' className='pr-4 border-r'>Discord</a>
-							<a href='https://github.com/advilm/rewind-frontend' target='_blank' rel='noreferrer' className='pl-4'>GitHub</a>
+							<a href='https://discord.gg/EbJzhBqu2U' target='_blank' rel='noreferrer' className='px-4 border-r'>Discord</a>
+							<a href='https://github.com/advilm/rewind-frontend' target='_blank' rel='noreferrer' className='px-4'>GitHub</a>
 						</div>
 					</div>
 				</nav>
