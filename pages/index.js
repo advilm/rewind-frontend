@@ -1,13 +1,11 @@
-import 'tailwindcss/tailwind.css';
-
 import React from 'react';
+import 'tailwindcss/tailwind.css';
+import Layout from '../components/layout';
 
 export default function Home() {
 	return (
-		<div className='flex bg-blue-dark'>
-			<div className='flex justify-center items-center h-screen box-border border-b border-blue-light'>
-
-			</div>
-		</div>
+		<Layout>
+			<p className='text p-4 text-xl'>Epic text</p>
+		</Layout>
 	);
 }
