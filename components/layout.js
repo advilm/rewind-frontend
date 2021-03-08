@@ -20,7 +20,8 @@ export default function Layout({
 							<strong>Rewind</strong>
 						</div>
 						<div className='items-end'>
-							<a href='https://github.com/advilm/rewind-frontend' target='_blank' rel='noreferrer'>GitHub</a>
+							<a href='https://discord.gg/EbJzhBqu2U' target='_blank' rel='noreferrer' className='pr-4 border-r'>Discord</a>
+							<a href='https://github.com/advilm/rewind-frontend' target='_blank' rel='noreferrer' className='pl-4'>GitHub</a>
 						</div>
 					</div>
 				</nav>
