@@ -1,5 +1,4 @@
 // tailwind.config.js
-const colors = require('tailwindcss/colors');
 
 module.exports = {
 	darkMode: false,
@@ -11,6 +10,7 @@ module.exports = {
 			'primary-light': '#171a26',
 			'secondary': '#4fc2f7',
 			'primary-text': '#e1e1e1',
+			'secondary-dark': '#0ba7f3'
 		}
 	},
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}']
