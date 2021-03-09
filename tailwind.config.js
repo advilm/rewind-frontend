@@ -7,9 +7,9 @@ module.exports = {
 			'transparent': 'transparent',
 			'current': 'currentColor',
 			'primary': '#08090d',
-			'primary-light': '#171a26',
-			'secondary': '#4fc2f7',
+			'primary-light': '#12151e',
 			'primary-text': '#e1e1e1',
+			'secondary': '#4fc2f7',
 			'secondary-dark': '#0ba7f3'
 		}
 	},
