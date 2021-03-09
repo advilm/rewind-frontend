@@ -19,7 +19,7 @@ export function getServerSideProps(ctx) {
 
 async function authenticate(query, setStatus) {
 	if (!query.code) setStatus('error');
-	const res = await fetch('http://localhost:3001/authenticate', {
+	const res = await fetch('https://api.advil.cf/authenticate', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
