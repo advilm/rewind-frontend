@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+// import { useDispatch } from 'react-redux';
+
 import Layout from '../components/Layout';
 
 export default function Callback({ query }) {
 	const [status, setStatus] = useState(0);
+	// const dispatch = useDispatch();
+	const router = useRouter();
 
-	useEffect(() => authenticate(query, setStatus), []);
+	useEffect(async () => {
+		try { 
+			const data = auth(query);
+			router.push('/app');
+
+			console.log(await data);
+		} 
+		catch (e) { setStatus('error'); console.error(e); }
+	}, []);
 
 	return (
 		<Layout>
-			<p className='flex justify-center text-5xl pt-24'>{status === 0 ? '...' : status === 'error' ? 'An error occured with Discord authentification' : 'Hello ' + status.username}</p>
+			<p className='flex justify-center text-5xl pt-24'>
+				{status === 0 ? 'Loading' : 'An error has occured'}
+			</p>
 		</Layout>
 	);
 }
@@ -17,15 +32,15 @@ export function getServerSideProps(ctx) {
 	return { props: { query: ctx.query } };
 }
 
-async function authenticate(query, setStatus) {
-	if (!query.code) setStatus('error');
-	const res = await fetch('https://api.advil.cf/authenticate', {
+async function auth(query) {
+	if (!query.code) throw 'No code';
+	const res = await (await fetch('http://localhost:3001/auth', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify({ code: query.code })
-	});
-	const json = await res.json();
-	setStatus(json);
+	})).json();
+
+	return res;
 }
