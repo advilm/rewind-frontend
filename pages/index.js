@@ -2,8 +2,8 @@ import React from 'react';
 import 'tailwindcss/tailwind.css';
 import Layout from '../components/Layout';
 
-const url = 'https://discord.com/api/oauth2/authorize?client_id=639617043502727209&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=identify%20guilds';
-// const url = 'https://discord.com/api/oauth2/authorize?client_id=639617043502727209&redirect_uri=https%3A%2F%2Frewind.advil.cf%2Fcallback&response_type=code&scope=identify%20guilds'
+// const url = 'https://discord.com/api/oauth2/authorize?client_id=639617043502727209&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=identify%20guilds';
+const url = 'https://discord.com/api/oauth2/authorize?client_id=639617043502727209&redirect_uri=https%3A%2F%2Frewind.advil.cf%2Fcallback&response_type=code&scope=identify%20guilds'
 
 export default function Home() {
 	return (

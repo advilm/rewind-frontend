@@ -34,7 +34,7 @@ export function getServerSideProps(ctx) {
 
 async function auth(query) {
 	if (!query.code) throw 'No code';
-	const res = await (await fetch('http://localhost:3001/auth', {
+	const res = await (await fetch('https://api.advil.cf/auth', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
