@@ -4,13 +4,11 @@ import Link from 'next/link';
 export default function Nav() {
 	return (
 		<nav className='py-4 bg-primary-light text-xl'>
-			<div className='flex items-strech justify-between ml-2'>
-				<Link href="/">
-					<a>
-						<div className='flex items-center'>
-							<img src='favicon.ico' width='32' height='32' className='mx-2'></img>
-							<strong>Rewind</strong>
-						</div>
+			<div className='flex justify-between ml-2'>
+				<Link href='/'>
+					<a className='flex items-center'>
+						<img src='favicon.ico' width='32' height='32' className='mx-2'></img>
+						<strong>Rewind</strong>
 					</a>
 				</Link>
 				<div className='items-end'>
