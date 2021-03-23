@@ -1,8 +1,14 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 
+import { RecoilRoot } from 'recoil';
+
 function App({ Component, pageProps }) {
-	return <Component {...pageProps} />;
+	return (
+		<RecoilRoot>
+			<Component {...pageProps} />
+		</RecoilRoot>
+	);
 }
 
 export default App;

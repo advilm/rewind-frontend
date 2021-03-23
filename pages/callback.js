@@ -11,9 +11,9 @@ export default function Callback({ query }) {
 
 	useEffect(async () => {
 		try { 
-			const data = auth(query);
 			router.push('/app');
-
+			
+			const data = auth(query);
 			console.log(await data);
 		} 
 		catch (e) { setStatus('error'); console.error(e); }
@@ -21,9 +21,7 @@ export default function Callback({ query }) {
 
 	return (
 		<Layout>
-			<p className='flex justify-center text-5xl pt-24'>
-				{status === 0 ? 'Loading' : 'An error has occured'}
-			</p>
+			{status !== 0 ? <p className='flex justify-center text-5xl pt-24'>An error has occured</p> : ''}
 		</Layout>
 	);
 }
@@ -34,7 +32,7 @@ export function getServerSideProps(ctx) {
 
 async function auth(query) {
 	if (!query.code) throw 'No code';
-	const res = await (await fetch('https://api.advil.cf/auth', {
+	const res = await (await fetch('http://localhost:3001/auth', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
