@@ -7,7 +7,7 @@ export default function Nav() {
 			<div className='flex justify-between ml-2'>
 				<Link href='/'>
 					<a className='flex items-center'>
-						<img src='favicon.ico' width='32' height='32' className='mx-2'></img>
+						<img src='favicon.ico' alt='logo' width='32' height='32' className='mx-2'></img>
 						<strong>Rewind</strong>
 					</a>
 				</Link>
