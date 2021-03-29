@@ -7,7 +7,7 @@ export default function Layout({
 	return (
 		<div>
 			<div className='flex flex-col bg-primary h-screen text-primary-text'>
-				<Nav />
+				<Nav/>
 				{children}
 			</div>
 		</div>
