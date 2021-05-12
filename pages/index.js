@@ -10,11 +10,11 @@ export default function Home() {
 		<Layout>
 			<div className='flex flex-col items-center text-center pt-24'>
 				<h1 className='text-5xl'>Press the button</h1>
-				<button className='duration-200 p-2 mt-4 rounded-md text-xl bg-secondary text-primary hover:bg-secondary-dark'>
-					<a href={url}>
+				<a href={url}>
+					<button className='duration-200 p-2 mt-4 rounded-md text-xl bg-secondary text-primary hover:bg-secondary-dark'>
 						Login with Discord
-					</a>
-				</button>
+					</button>
+				</a>
 			</div>
 		</Layout>
 	);
